@@ -1,11 +1,7 @@
 language: python
-python:
-  - "3.5"
-  - "3.6"
 install:
   - pip install -r requirements.txt
-  - pip install pytest
 script:
-  - coverage run --source=tsmppt60_driver pytest
+  - coverage run test_calc.py
 after_success:
   - coveralls
