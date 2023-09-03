@@ -5,6 +5,4 @@ python:
 install:
   - pip install coveralls
 script:
-  - pytest
-after_success:
-  - coveralls
+  - coverage run --source=mypkg -m pytest tests/coveralls
